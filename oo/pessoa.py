@@ -1,5 +1,7 @@
 class Pessoa:
-    #
+    # Atributo de classe
+    olhos = 2
+
     def __init__(self, *filhos, nome=None, idade=35):
         """
         metodo construtor (primeiro a rodar)
@@ -37,3 +39,11 @@ if __name__ == '__main__':
     # atributos dos objetos
     print(luciano.__dict__)
     print(marcelo.__dict__)
+
+    # atributo de classe
+    print(luciano.idade)
+
+    #modifica atributo objeto
+    luciano.olhos = 1
+    print(luciano.olhos)
+    print(marcelo.olhos)
