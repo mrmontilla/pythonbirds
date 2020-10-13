@@ -23,3 +23,17 @@ if __name__ == '__main__':
     print(luciano.idade)
     for filho in luciano.filhos:
         print(filho.nome)
+    # print(luciano.sobrenome) # dara erro
+    #criando atributos dinamicamente
+    luciano.sobrenome = 'silva'
+    print(luciano.sobrenome)
+
+    # atributos dos objetos
+    print(luciano.__dict__)
+    print(marcelo.__dict__)
+
+    # removendo atributos
+    del luciano.filhos
+    # atributos dos objetos
+    print(luciano.__dict__)
+    print(marcelo.__dict__)
