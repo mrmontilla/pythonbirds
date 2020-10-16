@@ -70,7 +70,11 @@ os seguintes atributos:
     >>> direcao.valor
     'Norte'
 
+<<<<<<< HEAD
     >>> carro = Carro(direcao, motor)
+=======
+    >>> carro = Carro()
+>>>>>>> origin/simples
     >>> carro.calcular_velocidade()
     0
     >>> carro.acelerar()
@@ -109,6 +113,7 @@ os seguintes atributos:
     >>> carro.calcular_direcao()
     'Norte'
 """
+<<<<<<< HEAD
 class Carro:
 
     def __init__(self, direcao, motor):
@@ -132,6 +137,8 @@ class Carro:
 
     def girar_a_esquerda(self):
         self.direcao.girar_a_esquerda()
+=======
+>>>>>>> origin/simples
 
 
 class Direcao:
@@ -151,7 +158,11 @@ class Direcao:
 class Motor:
 
     def __init__(self):
+<<<<<<< HEAD
         self.velocidade = 0
+=======
+       self.velocidade = 0
+>>>>>>> origin/simples
 
     def acelerar(self):
         self.velocidade += 1
@@ -162,3 +173,10 @@ class Motor:
         # if self.velocidade <0:
         #     self.velocidade = 0
         self.velocidade = max(0, self.velocidade-2)
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/simples
