@@ -45,3 +45,18 @@ if __name__ == '__main__':
     print(luciano.idade)
     for filho in luciano.filhos:
         print(filho.nome)
+
+    # criando atributos
+    luciano.sobrenome = 'Silva'
+    print(luciano.sobrenome)
+
+    # verificando atributos de instancia
+    print(luciano.__dict__)
+    print(maria.__dict__)
+    print()
+
+    # removendo atributos de instancia
+    del luciano.filhos
+    del maria.idade
+    print(luciano.__dict__)
+    print(maria.__dict__)
