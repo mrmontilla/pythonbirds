@@ -5,7 +5,8 @@ class Pessoa:
 
     # Definindo atributos
     # Aceita variaveis de inicialização, com valor padrão
-    def __init__(self, s_nome=None, idade=35):
+    def __init__(self, *filhos, s_nome=None, idade=35):
+        self.filhos = list(filhos)
         self.nome = s_nome
         self.idade = idade
 
@@ -16,28 +17,31 @@ class Pessoa:
         """
         return f'Olá {id(self)}'
 
-
-
 # executa se chamado diretamente
+
+
 if __name__ == '__main__':
     # Construindo o metodo
-    p = Pessoa()
+    maria = Pessoa(s_nome='Maria')
+    luciano = Pessoa(maria, s_nome='Luciano')
 
     # Chamando o metodo
-    print(Pessoa.cumprimentar(p))
+    print(Pessoa.cumprimentar(luciano))
 
-    #chamando o metodo corretamente
-    print(id(p))
-    print(p.cumprimentar())
+    # chamando o metodo corretamente
+    print(id(luciano))
+    print(luciano.cumprimentar())
 
     # Chamada de atributo
-    print(p.nome)
+    # print(luciano.nome)
 
     # alterar valor de atributo
-    p.nome = 'Joca'
-    print(p.nome)
+    # luciano.nome = 'Joca'
+    # print(luciano.nome)
 
     # Construindo o metodo, com passagem de parametros
-    p = Pessoa("Lucia")
-    print(p.nome)
-    print(p.idade)
+    # luciano = Pessoa("Lucia")
+    print(luciano.nome)
+    print(luciano.idade)
+    for filho in luciano.filhos:
+        print(filho.nome)
