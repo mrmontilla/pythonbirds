@@ -4,6 +4,13 @@ class Pessoa:
     """
 
     # Definindo atributos
+    # Atributos de classe
+    olhos = 2
+
+
+
+
+
     # Aceita variaveis de inicialização, com valor padrão
     def __init__(self, *filhos, s_nome=None, idade=35):
         self.filhos = list(filhos)
@@ -60,3 +67,19 @@ if __name__ == '__main__':
     del maria.idade
     print(luciano.__dict__)
     print(maria.__dict__)
+
+    # atributos de classe
+    print(Pessoa.olhos)
+    print(luciano.olhos)
+    print()
+    print(id(Pessoa.olhos))
+    print(id(luciano.olhos))
+    print(id(maria.olhos))
+
+    luciano.olhos = 1
+    print(luciano.__dict__)
+    print(maria.__dict__)
+
+    print(id(Pessoa.olhos))
+    print(id(luciano.olhos))
+    print(id(maria.olhos))
