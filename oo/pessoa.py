@@ -24,6 +24,18 @@ class Pessoa:
         """
         return f'Olá {id(self)}'
 
+    # Metodos estaticos
+    @staticmethod  # decorator
+    def metodo_estatico():
+       return 42
+
+    @classmethod
+    def nome_e_atributo_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
+
+
+
+
 # executa se chamado diretamente
 
 
@@ -80,6 +92,12 @@ if __name__ == '__main__':
     print(luciano.__dict__)
     print(maria.__dict__)
 
-    print(id(Pessoa.olhos))
-    print(id(luciano.olhos))
-    print(id(maria.olhos))
+    print()
+    print(Pessoa.metodo_estatico())
+    print(luciano.metodo_estatico())
+    print(maria.metodo_estatico())
+
+    print()
+    print(Pessoa.nome_e_atributo_de_classe())
+    print(luciano.nome_e_atributo_de_classe())
+    print(maria.nome_e_atributo_de_classe())
